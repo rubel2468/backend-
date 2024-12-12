@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://client-ecommarce-22.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -100,5 +100,5 @@ console.log(cart)
   }
 });
 
-const port = 2000;
+const port = "https://backend-ecommarce-22.vercel.app";
 app.listen(port, () => console.log(`Server is running on port ${port}`));
