@@ -100,5 +100,5 @@ console.log(cart)
   }
 });
 
-const port = 2000;
+const port = "https://backend-ecommarce-22.vercel.app";
 app.listen(port, () => console.log(`Server is running on port ${port}`));
