@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: "https://client-ecommarce-22.vercel.app",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
