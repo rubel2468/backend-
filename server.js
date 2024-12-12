@@ -11,7 +11,7 @@ import { Stripe } from 'stripe';
 const app = express();
 
 app.use(bodyParser.json());
-
+export const  maxDuration=300
 app.use(
   cors({
     origin: "https://client-ecommarce-22.vercel.app",
