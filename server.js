@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://client-ecommarce-22.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -88,8 +88,8 @@ console.log(cart)
       payment_method_types:["card"],
       line_items:lineItems,
       mode:"payment",
-      success_url:"http://localhost:5173/sucess",
-      cancel_url:"http://localhost:5173/cancel",
+      success_url:"https://client-ecommarce-22.vercel.app/sucess",
+      cancel_url:"https://client-ecommarce-22.vercel.app/cancel",
   });
 
   res.json({id:session.id})
