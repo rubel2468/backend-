@@ -32,16 +32,7 @@ app.use(
 
 
 
-const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect("mongodb://127.0.0.1:27017/e-comarce");
-    console.log("Connected to MongoDB");
-  } catch {
-    console.error("Error connecting to the database");
-  }
-};
 
-connectDB();
 
 
 app.get("/",(req,res)=>{
@@ -105,6 +96,16 @@ console.log(cart)
     res.status(500).json({ error: 'Failed to create checkout session' });
   }
 });
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect("mongodb://127.0.0.1:27017/e-comarce");
+    console.log("Connected to MongoDB");
+  } catch {
+    console.error("Error connecting to the database");
+  }
+};
+
+connectDB();
 
 const port = 2000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
