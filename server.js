@@ -55,7 +55,7 @@ const connectDB = async () => {
     const conn = await mongoose.connect("mongodb://127.0.0.1:27017/e-comarce");
     console.log("Connected to MongoDB");
   } catch {
-    console.error("Error connecting to the database");
+    console.error("Error connecting ");
   }
 };
 
