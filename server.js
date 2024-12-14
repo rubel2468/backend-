@@ -12,14 +12,14 @@ const app = express();
 
 app.use(bodyParser.json());
 
-// app.use(
-//   cors({
-//     origin: "https://client-ecommarce-22.vercel.app",
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-//   })
-// );
-app.use(cors())
+app.use(
+  cors({
+    origin: "https://client-ecommarce-22.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 
 // ... (rest of the code remains the same)
 
