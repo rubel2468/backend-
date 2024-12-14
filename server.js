@@ -30,6 +30,17 @@ app.use(
 
 
 
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect("mongodb://127.0.0.1:27017/e-comarce");
+    console.log("Connected to MongoDB");
+  } catch {
+    console.error("Error connecting to the database");
+  }
+};
+
+connectDB();
+
 
 app.get("/",(req,res)=>{
   res.send("server is running")
@@ -46,17 +57,6 @@ app.use("/api/cart", cartRouter);
 // app.use("/api/address", addressRouter);
 
 
-
-const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect("mongodb://127.0.0.1:27017/e-comarce");
-    console.log("Connected to MongoDB");
-  } catch {
-    console.error("Error connecting to the database");
-  }
-};
-
-connectDB();
 
 
 
