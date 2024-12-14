@@ -30,10 +30,6 @@ app.use(
 // user Router
 
 
-const handler = (req, res) => {
-  const d = new Date()
-  res.end(d.toString())
-}
 
 
 const connectDB = async () => {
