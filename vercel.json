@@ -13,12 +13,12 @@
     "version": 2,
     "name": "api",
     "builds": [
-       { "src": "server.js", 
+       { "src": "app.js", 
        "use": "@vercel/node" },
        { "src": "src/**/*", 
        "use": "@vercel/static" }
     ],
     "routes": [
-       { "src": "/(.*)", "dest": "/server.js" }
+       { "src": "/(.*)", "dest": "/app.js" }
     ]
  }
