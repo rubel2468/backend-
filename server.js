@@ -10,7 +10,7 @@ import { Stripe } from 'stripe';
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.);
 
 app.use(
   cors({
