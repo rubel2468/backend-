@@ -10,11 +10,11 @@ import { Stripe } from 'stripe';
 
 const app = express();
 
-app.use(bodyParser.);
+app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://backend-ecommarce-22.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
     maxAge:3600,
