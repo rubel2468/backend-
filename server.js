@@ -12,16 +12,16 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use(
-  cors({
-    origin: "https://client-ecommarce-22.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-    maxAge:3600,
+// app.use(
+//   cors({
+//     origin: "https://client-ecommarce-22.vercel.app",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//     maxAge:3600,
 
 
-  })
-);
+//   })
+// );
 
 
 
