@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: "https://backend-ecommarce-22.vercel.app",
+    origin: "https://client-ecommarce-22.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
     maxAge:3600,
