@@ -18,7 +18,7 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
     maxAge:3600,
-    exposedHeaders:["x-custom-header"]
+
   })
 );
 
