@@ -47,7 +47,7 @@ app.use(
 
 
 app.get("/",(req,res)=>{
-  res.send("server is running")
+  res.send("server is running now")
 })
 app.use("/api/user", userRouter);
 
