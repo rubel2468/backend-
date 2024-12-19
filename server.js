@@ -12,25 +12,25 @@ const app = express();
 
 app.use(bodyParser.json());
 
-// app.use(
-//   cors({
-//     origin: "https://client-ecommarce-22.vercel.app",
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-//     maxAge:3600,
+app.use(
+  cors({
+    origin: "https://client-ecommarce-22.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+    maxAge:3600,
 
 
-//   })
-// );
+  })
+);
 
 
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://client-ecommarce-22.vercel.app'); // Replace with your frontend's origin
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow specific HTTP methods
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specific headers
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', 'https://client-ecommarce-22.vercel.app'); // Replace with your frontend's origin
+//   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow specific HTTP methods
+//   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specific headers
+//   next();
+// });
 
 // ... (rest of the code remains the same)
 
@@ -63,7 +63,7 @@ app.use("/api/cart", cartRouter);
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb://127.0.0.1:27017/e-comarce");
+    const conn = await mongoose.connect("mongodb://localhost:27017/e-comarce");
     console.log("Connected to MongoDB");
   } catch {
     console.error("Error connecting ");
