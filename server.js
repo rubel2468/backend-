@@ -60,10 +60,9 @@ app.use("/api/cart", cartRouter);
 // address Router
 // app.use("/api/address", addressRouter);
 
-
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb+srv://rubel2468:hadarput@cluster0.6eh9y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+    const conn = await mongoose.connect("mongodb+srv://rubel2468:hadarput@cluster0.6eh9y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test");
     console.log("Connected to MongoDB");
   } catch {
     console.error("Error connecting ");
