@@ -63,7 +63,7 @@ app.use("/api/cart", cartRouter);
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb://localhost:27017/e-comarce");
+    const conn = await mongoose.connect("mongodb+srv://rubel2468:hadarput@cluster0.6eh9y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
     console.log("Connected to MongoDB");
   } catch {
     console.error("Error connecting ");
