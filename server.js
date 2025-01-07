@@ -60,16 +60,30 @@ app.use("/api/cart", cartRouter);
 // address Router
 // app.use("/api/address", addressRouter);
 
+
 const connectDB = async () => {
+  
+
+
   try {
-    const conn = await mongoose.connect("mongodb+srv://rubel2468:hadarput@cluster0.6eh9y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test");
+    const conn = await mongoose.connect("mongodb+srv://rubel2468:hadarput@cluster0.6eh9y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test",{ serverSelectionTimeoutMS: 30000,} );
     console.log("Connected to MongoDB");
+   
   } catch {
     console.error("Error connecting ");
   }
 };
 
 connectDB();
+
+
+
+// mongoose.connect('mongodb://localhost:27017/mydatabase', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds
+//     socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
+// });
 
 
 
